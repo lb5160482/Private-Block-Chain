@@ -119,7 +119,7 @@ class Blockchain {
             if (current_time - message_time < MAXTIMEDIFF) {
                 let is_valid = bitcoinMessage.verify(message, address, signature);
                 if (is_valid) {
-                    let block = new BlockClass.Block({owner: address, star: star});
+                    let block = new BlockClass.Block({owner: address, star: star})
                     let added_block = self._addBlock(block);
                     resolve(block);
                 } else {
